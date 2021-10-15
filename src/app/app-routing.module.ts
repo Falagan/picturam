@@ -5,7 +5,7 @@ import { AppRoutes } from './config/app-routes';
 const routes: Routes = [
   {
     path: AppRoutes.SEARCHER,
-    loadChildren: () => import('../app/modules/searcher/searcher.module').then(m => m.SearcherModule)
+    loadChildren: () => import('../app/modules/searcher/searcher.module').then((m) => m.SearcherModule)
   }
 ];
 
@@ -13,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

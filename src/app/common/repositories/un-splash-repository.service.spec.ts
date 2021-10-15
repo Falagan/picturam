@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SplashRepositoryService } from './splash-repository.service';
+import { SplashRepositoryService } from './un-splash-repository.service';
 
 describe('SplashRepositoryService', () => {
   let service: SplashRepositoryService;
