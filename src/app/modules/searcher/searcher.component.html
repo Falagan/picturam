@@ -1,1 +1,19 @@
-<p>searcher works!</p>
+<div class="container-fluid h-100 background overflow-auto">
+  <div class="row h-100">
+    <!-- Main Search -->
+    <div class="col-12 mt-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 fixed-top container-search">
+            <app-main-search (textToSearch)="onSearch($event)"></app-main-search>
+          </div>
+        </div>
+        <div class="row margin-top">
+          <div class="col-12">
+            <app-results-search></app-results-search>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

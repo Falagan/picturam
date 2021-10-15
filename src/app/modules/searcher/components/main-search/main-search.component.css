@@ -1,0 +1,11 @@
+.title {
+  font-size: 35px;
+}
+
+.logo {
+  color: rgb(255, 230, 0);
+  font-size: 67px;
+  position: relative;
+  left: -4px;
+  top: 11px;
+}

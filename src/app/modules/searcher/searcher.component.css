@@ -1,0 +1,15 @@
+.background {
+  background-image: url('src/assets/back.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.margin-top {
+  margin-top: 145px;
+}
+
+.container-search {
+  background-color: #f0f1f5;
+}

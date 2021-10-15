@@ -1,0 +1,15 @@
+<div class="container-fluid h-100 mt-5">
+  <div class="row h-100 align-items-center">
+    <div class="col-lg-8 offset-lg-2 h-100 text-center">
+      <!-- Search -->
+      <span class="title"><span class="logo">></span>picturam</span>
+      <mat-form-field appearance="outline" class="w-100 mt-3">
+        <input matInput type="text" placeholder="Busca!" [(ngModel)]="inputValue"
+          (keydown.enter)="searchOnPressEnter()">
+        <button matSuffix mat-icon-button (click)="searchOnClickButton($event)">
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
