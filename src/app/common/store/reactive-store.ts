@@ -2,10 +2,10 @@
 import * as _ from 'lodash';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
-export abstract class SimpleReactiveStore<T> {
+export abstract class SimpleReactiveStore {
     private statePropsSubjects: any;
     private stateSubject: Subject<any>;
-    public state!: T;
+    public state!: any;
 
     constructor() {
         this.statePropsSubjects = {};
@@ -16,7 +16,7 @@ export abstract class SimpleReactiveStore<T> {
      * Initializes store with the given object props
      * @param initialState
      */
-    public initializeStore(initialState: T) {
+    public initializeStore(initialState: any) {
         this.state = _.cloneDeep(initialState);
         const keysInitial = Object.keys(initialState);
         for (let e = 0; e < keysInitial.length; e++) {
@@ -25,11 +25,11 @@ export abstract class SimpleReactiveStore<T> {
         this.stateSubject.next(this.state);
     }
 
-    public getState(): T {
+    public getState(): any {
         return _.cloneDeep(this.state);
     }
 
-    public setState(newState: T) {
+    public setState(newState: any) {
         this.state = _.cloneDeep(newState);
         this.stateSubject.next(this.state);
         const keysState: string[] = Object.keys(this.state);
@@ -63,7 +63,7 @@ export abstract class SimpleReactiveStore<T> {
         return this.statePropsSubjects[prop].asObservable();
     }
 
-    public bindState$(): Observable<T> {
+    public bindState$(): Observable<any> {
         return this.stateSubject.asObservable();
     }
     
